@@ -1,12 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
 
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    list-style: none;
-    font-family: 'Roboto', sans-serif;
-    font-weight:600;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
 }
 
 .header {
@@ -21,11 +27,12 @@
 
 .nav {
   width: 90%;
-  height: 90px;
+  height: 6rem;
+
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .logo {
@@ -33,17 +40,17 @@
   cursor: pointer;
 }
 
-.icono{
+.icono {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
+  gap: 1.5rem;
 }
 
 .icono h4 {
-  color: #D1C8DB;
+  color: #d1c8db;
   font-size: 0.8rem;
-  letter-spacing: .9rem;
+  letter-spacing: 0.9rem;
   text-transform: uppercase;
 }
 
@@ -52,13 +59,15 @@
   cursor: pointer;
 }
 
-.contenedor {   
-  height: 440px;
-  color: #05BD02; 
+.contenedor {
+  height: 77vh;
+  width: 100%;
+  margin: 0 auto;
+  color: #05bd02;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 35px;
+  font-size: 2.1rem;
 }
 
 .color {
@@ -71,62 +80,90 @@
   height: 40px;
 }
 
-p { 
+p {
   float: left;
-  color: #00D1F2;
+  color: #00d1f2;
   font-weight: 100;
 }
 
 .icon {
-  font-size: 30px;
+  font-size: 2rem;
 }
 
 ul {
-  padding-left: 250px; 
-  animation: animacion 5s infinite;  
+  padding-left: 14.5rem;
+  animation: animacion 7s infinite;
 }
 
 @keyframes animacion {
-  0%, 12.66%, 100% {
+  0%,
+  12.66%,
+  100% {
     transform: translate3d(0, 0, 0);
   }
-  16.66%, 29.32% {
+  16.66%,
+  29.32% {
     transform: translate3d(0, -25%, 0);
   }
-  33.32%, 45.98% {
+  33.32%,
+  45.98% {
     transform: translate3d(0, -50%, 0);
   }
-  49.98%, 62.64% {
+  49.98%,
+  62.64% {
     transform: translate3d(0, -75%, 0);
   }
-  66.64%, 79.3% {
+  66.64%,
+  79.3% {
     transform: translate3d(0, -50%, 0);
   }
-  83.3%, 95.96% {
+  83.3%,
+  95.96% {
     transform: translate3d(0, -25%, 0);
   }
-} 
+}
 
 .copy {
   width: 90%;
-  margin: 50px auto;
+  margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;  
+  justify-content: space-between;
 }
 
 .copy h4 {
-  font-size: .8rem;
-  color: #D1C8DB;
+  font-size: 0.8rem;
+  color: #d1c8db;
 }
 
 .copy .color {
-  color: #D1C8DB;
+  color: #d1c8db;
   font-size: 1.2rem;
-  cursor: pointer;   
+  cursor: pointer;
   transition: 1s;
 }
 
 .copy .color:hover {
-  color: #00D1F2;  
+  color: #00d1f2;
+}
+
+@media screen and (max-width: 480px)  {
+  .contenedor {
+    height: 77vh;
+  }
+  .icono h4 {
+    opacity: 0;
+  } 
+  .textos p {
+    display: none;
+  }
+  ul {
+    padding-left: 6.5rem;
+  }
+}
+
+@media (max-width: 786px) and (orientation: landscape) {
+  .contenedor {
+    height: 60vh;
+  }
 }
